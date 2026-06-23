@@ -1,0 +1,78 @@
+<!-- @dsCard group="FPB Teaser — Review" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fake Plastic Brands — Teaser concepts (pick a direction)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bone:#f2f0e9;--ink:#13151f;--blue:#16225e;--mono:"JetBrains Mono",ui-monospace,monospace}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--mono);background:var(--bone);color:var(--ink);padding:clamp(20px,4vw,52px);line-height:1.55}
+  header{max-width:80ch;margin-bottom:clamp(26px,4vw,46px)}
+  .tag{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+  h1{font-family:"Archivo Expanded",sans-serif;font-weight:700;font-size:clamp(26px,4.6vw,46px);
+    text-transform:uppercase;letter-spacing:-.01em;line-height:1.02;margin-bottom:14px}
+  p.intro{font-size:14px;max-width:70ch;opacity:.8}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(16px,2.4vw,26px)}
+  .card{border:1.5px solid var(--ink);display:flex;flex-direction:column;background:#fff}
+  .frame{position:relative;aspect-ratio:16/10;overflow:hidden;border-bottom:1.5px solid var(--ink);background:var(--bone)}
+  .frame iframe{position:absolute;top:0;left:0;width:200%;height:200%;border:0;transform:scale(.5);transform-origin:top left;pointer-events:none}
+  .frame a.cover{position:absolute;inset:0;z-index:2}
+  .meta{padding:16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .meta h2{font-family:"Archivo Expanded",sans-serif;font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:.01em}
+  .meta .no{color:var(--blue);font-weight:700}
+  .meta small{font-size:12.5px;opacity:.72;flex:1}
+  .meta a.open{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);
+    text-decoration:none;border-bottom:1.5px solid var(--blue);align-self:flex-start;padding-bottom:2px}
+  footer{margin-top:clamp(26px,4vw,44px);border-top:1.5px solid var(--ink);padding-top:16px;
+    font-size:12px;opacity:.7;max-width:80ch}
+  .lead{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    background:var(--blue);color:var(--bone);padding:2px 8px;margin-left:8px;vertical-align:middle}
+</style>
+</head>
+<body>
+  <header>
+    <p class="tag">Fake Plastic Brands · teaser concepts · 2026-06</p>
+    <h1>One job: catch the audience<br>off Instagram. Pick a direction.</h1>
+    <p class="intro">Three takes on the same teaser — one CTA, "notify me on release," product deliberately
+      not out yet. Same blue through-line, treated three ways. Open each full-screen; they're responsive.
+      Faces and the exact blue are stand-ins until Marck's meme fonts land.</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <div class="frame"><iframe src="working-index.html" title="Concept C preview" scrolling="no"></iframe><a class="cover" href="working-index.html" target="_blank" aria-label="Open Concept C"></a></div>
+      <div class="meta">
+        <h2><span class="no">C.</span> Working Index <span class="lead">recommended</span></h2>
+        <small>The teaser as the product's own working file — blueprint grid, a redacted index, a node motif that quietly foreshadows Spiral. Looks like thinking in progress. The research-fresh direction.</small>
+        <a class="open" href="working-index.html" target="_blank">Open full</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="frame"><iframe src="transmission.html" title="Concept A preview" scrolling="no"></iframe><a class="cover" href="transmission.html" target="_blank" aria-label="Open Concept A"></a></div>
+      <div class="meta">
+        <h2><span class="no">A.</span> Transmission</h2>
+        <small>The loud read — full-bleed electric blue, a giant treated headline, a broadcast "radio" lower-third (on air, signal bars). Blue as the content. The meme-native, maximal take.</small>
+        <a class="open" href="transmission.html" target="_blank">Open full</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="frame"><iframe src="the-fold.html" title="Concept B preview" scrolling="no"></iframe><a class="cover" href="the-fold.html" target="_blank" aria-label="Open Concept B"></a></div>
+      <div class="meta">
+        <h2><span class="no">B.</span> The Fold</h2>
+        <small>The opposite — bone gallery-white, enormous space, one quiet line, a single hairline field, blue used exactly once. Restraint as the flex; maximally anti-cash-grab.</small>
+        <a class="open" href="the-fold.html" target="_blank">Open full</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>Questions to send Marck with these links: <code>teaser-review-questions.md</code>. The big fork is
+    loud (A) vs quiet (B), with C as a third path that does both through a working-file lens.</footer>
+</body>
+</html>

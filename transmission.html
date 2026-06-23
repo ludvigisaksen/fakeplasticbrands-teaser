@@ -1,0 +1,118 @@
+<!-- @dsCard group="FPB Teaser — Concepts" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fake Plastic Brands — Transmission (Concept A)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- --font-display is the swap point for Marck's meme font. Anton/Spline are high-craft stand-ins, not his face. -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* PROVISIONAL blue — re-tint to Marck's real hex when it lands */
+    --blue:#1a24e8; --blue-deep:#080a4a; --bone:#f2f0e9; --ink:#0a0a0a;
+    --font-display:"Anton","Arial Narrow",sans-serif;   /* SWAP IN meme font here */
+    --font-mono:"Spline Sans Mono",ui-monospace,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family:var(--font-mono);background:var(--blue);color:var(--bone);
+    min-height:100svh;display:flex;flex-direction:column;overflow-x:hidden;
+    background:
+      radial-gradient(120% 90% at 50% -10%, #2a34ff 0%, var(--blue) 45%, var(--blue-deep) 100%);
+  }
+  /* faint scanline/grain so the flat blue reads crafted, not template-flat */
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.05;
+    background-image:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px);mix-blend-mode:overlay}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;
+    padding:18px clamp(18px,4vw,46px);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+  .wordmark{font-weight:500}
+  .onair{display:inline-flex;align-items:center;gap:8px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--bone);animation:blink 1.4s steps(1) infinite}
+  @keyframes blink{50%{opacity:.15}}
+
+  main{flex:1;display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(24px,5vw,46px);gap:clamp(22px,4vw,40px)}
+  .kicker{font-size:clamp(11px,1.4vw,13px);letter-spacing:.34em;text-transform:uppercase;opacity:.75}
+  h1{font-family:var(--font-display);font-weight:400;line-height:.86;
+    font-size:clamp(56px,14.5vw,210px);letter-spacing:.005em;text-transform:uppercase}
+  h1 .ghost{color:transparent;-webkit-text-stroke:1.5px rgba(242,240,233,.55)}
+
+  /* capture row */
+  form{display:flex;flex-wrap:wrap;gap:10px;max-width:560px;align-items:stretch}
+  input[type=email]{flex:1 1 240px;min-width:0;background:transparent;border:1.5px solid var(--bone);
+    color:var(--bone);font-family:var(--font-mono);font-size:15px;padding:15px 16px;outline:none}
+  input::placeholder{color:rgba(242,240,233,.6)}
+  input:focus{border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.18)}
+  button{background:var(--bone);color:var(--blue-deep);border:0;cursor:pointer;
+    font-family:var(--font-mono);font-weight:500;font-size:13px;letter-spacing:.16em;
+    text-transform:uppercase;padding:15px 26px}
+  button:hover{background:#fff}
+  .formnote{font-size:11px;letter-spacing:.05em;opacity:.6;margin-top:12px;max-width:560px}
+  .ok{display:none;font-size:14px;letter-spacing:.04em;max-width:560px;line-height:1.5}
+  .ok.show{display:block} form.done{display:none}
+
+  /* broadcast lower-third / the "radio" */
+  footer{border-top:1px solid rgba(242,240,233,.28);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;overflow:hidden}
+  .ticker{display:flex;align-items:center;gap:26px;white-space:nowrap;padding:13px clamp(18px,4vw,46px);
+    animation:slide 26s linear infinite}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .bars{display:inline-flex;align-items:flex-end;gap:3px;height:13px}
+  .bars i{width:3px;background:var(--bone);animation:eq .9s ease-in-out infinite}
+  .bars i:nth-child(2){animation-delay:.15s}.bars i:nth-child(3){animation-delay:.3s}
+  .bars i:nth-child(4){animation-delay:.45s}.bars i:nth-child(5){animation-delay:.6s}
+  @keyframes eq{0%,100%{height:3px}50%{height:13px}}
+  .partners{padding:10px clamp(18px,4vw,46px);font-size:10.5px;letter-spacing:.16em;
+    text-transform:uppercase;opacity:.5;border-top:1px solid rgba(242,240,233,.16)}
+  .partners a{color:inherit;text-decoration:none;border-bottom:1px solid transparent}
+  .partners a:hover{border-color:rgba(242,240,233,.6)}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <span class="wordmark">Fake Plastic Brands</span>
+    <span class="onair"><span class="dot"></span> On air · Transmission 001</span>
+  </div>
+
+  <main>
+    <p class="kicker">No product yet. That's the point.</p>
+    <h1>Something<br>new is<br><span class="ghost">coming</span></h1>
+
+    <div>
+      <form id="capture" data-endpoint="REPLACE_WITH_CAPTURE_ENDPOINT" data-source="fpb-teaser-a">
+        <!-- INTEGRATION POINT: provider-agnostic. Wire data-endpoint to the lead-capture layer. -->
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email">
+        <button type="submit">Notify me on release</button>
+      </form>
+      <p class="ok" id="ok">You're on the list. We'll signal you when it opens — nothing else in the meantime.</p>
+      <p class="formnote">First to know when it drops. No spam, no noise. Leave whenever you want.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="ticker" aria-hidden="true">
+      <span class="bars"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Fake Plastic Brands</span><span>Transmission 001</span><span>Status: incoming</span>
+      <span class="bars"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Something new is coming</span><span>Stay tuned</span>
+      <span class="bars"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Fake Plastic Brands</span><span>Transmission 001</span><span>Status: incoming</span>
+      <span class="bars"><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Something new is coming</span><span>Stay tuned</span>
+    </div>
+    <div class="partners">For brands and partners, <a href="#partners">get in touch</a></div>
+  </footer>
+
+  <script>
+    // Demo-only success state. The real submit posts to data-endpoint (see INTEGRATION POINT).
+    const f=document.getElementById('capture'), ok=document.getElementById('ok');
+    f.addEventListener('submit',e=>{e.preventDefault();f.classList.add('done');ok.classList.add('show');});
+  </script>
+</body>
+</html>

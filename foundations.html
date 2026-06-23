@@ -1,0 +1,73 @@
+<!-- @dsCard group="FPB Teaser — Foundations" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fake Plastic Brands — Teaser Foundations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Expanded:wght@600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bone:#f2f0e9;--ink:#13151f;--blueA:#1a24e8;--blueB:#1c2a72;--blueC:#16225e;
+    --mono:"JetBrains Mono",ui-monospace,monospace}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--mono);background:var(--bone);color:var(--ink);padding:clamp(20px,4vw,48px);line-height:1.5}
+  h1{font-family:"Archivo Expanded",sans-serif;font-weight:600;font-size:clamp(22px,3.4vw,34px);
+    text-transform:uppercase;letter-spacing:-.01em;margin-bottom:6px}
+  .sub{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blueC);margin-bottom:34px}
+  h2{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--blueC);
+    margin:30px 0 12px;border-top:1.5px solid var(--ink);padding-top:12px}
+  .swatches{display:flex;flex-wrap:wrap;gap:14px}
+  .sw{width:130px}
+  .chip{height:64px;border:1.5px solid var(--ink)}
+  .sw small{display:block;font-size:11px;margin-top:6px;letter-spacing:.04em}
+  .sw b{font-size:11px;letter-spacing:.1em}
+  .type div{margin:10px 0}
+  .disp-a{font-family:"Anton",sans-serif;font-size:clamp(30px,6vw,56px);text-transform:uppercase;line-height:.9}
+  .disp-b{font-family:"Archivo Expanded",sans-serif;font-weight:600;font-size:clamp(22px,4vw,40px)}
+  .disp-c{font-family:var(--mono);font-weight:700;font-size:clamp(16px,2.4vw,22px);letter-spacing:.02em}
+  ul{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13.5px;max-width:70ch}
+  li::before{content:"— ";color:var(--blueC)}
+  .warn{margin-top:30px;border:1.5px dashed var(--blueC);padding:16px;font-size:12.5px;
+    color:var(--blueC);max-width:74ch;line-height:1.6}
+  code{background:rgba(22,34,94,.1);padding:1px 6px}
+</style>
+</head>
+<body>
+  <h1>Teaser — Foundations</h1>
+  <p class="sub">Fake Plastic Brands · lead-capture teaser · one CTA: notify on release</p>
+
+  <h2>Blue, three treatments (the fork Marck picks)</h2>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#1a24e8"></div><small><b>A · TRANSMISSION</b><br>#1A24E8 — blue as content</small></div>
+    <div class="sw"><div class="chip" style="background:#1c2a72"></div><small><b>B · THE FOLD</b><br>#1C2A72 — blue used once</small></div>
+    <div class="sw"><div class="chip" style="background:#16225e"></div><small><b>C · WORKING INDEX</b><br>#16225E — blueprint ink</small></div>
+    <div class="sw"><div class="chip" style="background:#f2f0e9"></div><small><b>BONE</b><br>#F2F0E9 — ground / text</small></div>
+    <div class="sw"><div class="chip" style="background:#13151f"></div><small><b>INK</b><br>#13151F — near-black</small></div>
+  </div>
+
+  <h2>Type — treated grotesque + mono (swap in Marck's meme font at <code>--font-display</code>)</h2>
+  <div class="type">
+    <div class="disp-a">Something new is coming</div>
+    <div class="disp-b">A new thing is on its way</div>
+    <div class="disp-c">FPB — WORKING INDEX · REV.001 · STATUS: IN PROGRESS</div>
+  </div>
+
+  <h2>Design spine (non-negotiable)</h2>
+  <ul>
+    <li>High-end and genuinely creative — it comes from a taste authority. Generic/templated is the failure mode.</li>
+    <li>Close to Marck, never a cash-grab (his #1 fear). Over-deliver, never over-promise.</li>
+    <li>Product is deliberately not out yet — "something new is coming," not "running out of ideas."</li>
+    <li>One CTA only: capture email. AI stance stays implicit — no "use AI?" toggle.</li>
+    <li>FPB is the single umbrella — partners/consultancy path stays discreet, page is audience-first.</li>
+    <li>Copy: dry, minimal, a little ironic. No arrows, nothing that reads AI-written.</li>
+  </ul>
+
+  <div class="warn">
+    Pending from Marck: the meme fonts + exact blue hex + "the radio." Faces and blues above are high-craft
+    stand-ins, flagged — not his actual identity. Swap the font into <code>--font-display</code> and re-tint
+    the blue per concept when assets land.
+  </div>
+</body>
+</html>
